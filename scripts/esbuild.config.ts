@@ -26,19 +26,9 @@ const context = await esbuild.context({
   bundle: true,
   external: [
     "obsidian",
-    "electron",
-    "@codemirror/autocomplete",
-    "@codemirror/collab",
-    "@codemirror/commands",
-    "@codemirror/language",
-    "@codemirror/lint",
-    "@codemirror/search",
-    "@codemirror/state",
-    "@codemirror/view",
-    "@lezer/common",
-    "@lezer/highlight",
-    "@lezer/lr",
     // for desktop only plugins
+    "electron",
+    "@electron/remote",
     ...(builtinModules as string[]),
     ...(builtinModules as string[]).map((m) => `node:${m}`),
   ],
@@ -53,7 +43,6 @@ const context = await esbuild.context({
       name: "copy-manifest",
       setup(build) {
         build.onEnd(async () => {
-          await $`cp ./src/styles.css ${distDir}/styles.css`;
           await $`cp ./manifest.json ${distDir}/manifest.json`;
         });
       },

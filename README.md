@@ -1,29 +1,26 @@
-# Obsidian Plugin Template (with Deno)
+# Always on Top
 
-This is a sample plugin for [Obsidian](https://obsidian.md).
+[![release](https://img.shields.io/github/manifest-json/v/ras0q/obsidian-always-on-top.svg?color=A68AF9\&style=for-the-badge\&logo=github)](https://github.com/ras0q/obsidian-always-on-top/releases/latest)
 
-You can use [Deno](https://deno.com) for almost everything in development!
+An [Obsidian](https://obsidian.md/) plugin to keep the window in the foreground.
 
-- Runtime: **Deno**
-- Formatter: **Deno**
-- Linter: **Deno** + **ESLint** (with `eslint-plugin-obsidianmd`)
-- Type Checker: **Deno**
-- Bundler: **esbuild** (`deno bundle` is back in v2.4, but lack of features)
+Toggle whether the Obsidian window stays always on top (topmost / pinned window/
+floating window).
 
-See
-[obsidianmd/obsidian-sample-plugin](https://github.com/obsidianmd/obsidian-sample-plugin)
-for details.
+Built using
+[ras0q/obsidian-plugin-deno-template](https://github.com/ras0q/obsidian-plugin-deno-template).
 
-## Setup
+## Usage
 
-**To simplify the explanation, we assume the plugin name is `my-feature`.**
+Run the command `Toggle always on top`.
 
-1. Create a new repository `<yourname>/obsidian-my-feature` from this template
-2. Clone the repository
-3. Rename variables in `manifest.json` and `main.ts`
-   - `id` should be `my-feature` (DON'T include `obsidian-` prefix)
-   - `name` should be `My Feature`
-   - The plugin class name should be `MyFeaturePlugin`
+You can assign a hotkey from the settings.
+
+## Notes
+
+- Desktop only
+- Uses Electron window APIs
+- Behavior may differ slightly across operating systems
 
 ## Development
 
