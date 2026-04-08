@@ -1,7 +1,7 @@
 {
   "id": "always-on-top",
   "name": "Always On Top",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "minAppVersion": "1.7.2",
   "description": "Keep the Obsidian window always on top of other applications.",
   "author": "ras0q",
